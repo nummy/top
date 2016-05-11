@@ -1,0 +1,55 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+#share{
+	position:fixed;
+	bottom:34px;
+	left:95%;
+	width:30px;
+	zoom:1;
+	transition: all 0.2s ease-in-out;
+}
+
+#share a{
+	background-image: url(share.png);
+	background-repeat: no-repeat;
+	display:block;
+	width:30px;
+	height:30px;
+	overflow:hidden;
+	margin-bottom:2px;
+	text-indent:-999px;
+}
+
+#share .sina {
+	background-position:0 0; 
+	position:absolute; 
+	bottom:32px;
+}
+#share a.sina:hover{
+	background-position: -30px 0;
+}
+
+#share .tencent { 
+	background-position:0 -30px; 
+	position:absolute; 
+	bottom:0;
+}
+
+#share a.tencent:hover { 
+	background-position:-30px -30px;
+}
+
+#share a#top{
+	background-position:0 -120px;
+	position:absolute;
+	bottom:64px;
+	cursor:pointer;
+}
+#share a#top:hover {
+	background-position:-30px -120px;
+}
+
+

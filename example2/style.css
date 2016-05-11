@@ -1,0 +1,17 @@
+*{ 
+	padding:0px; 
+	margin:0px;
+}
+
+#toTop{
+	width:54px; 
+	float:right; 
+	position:fixed; 
+	right:50px; 
+	bottom:15px;
+}
+
+.comment, .about, .gotop{ width:54px; height:56px; background:url(icon.png) no-repeat; display:block;}
+.comment{ background-position:0 0;}
+.about{ background-position:0 -59px;}
+.gotop{ background-position:0 -118px;} 

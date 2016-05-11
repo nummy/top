@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="../jquery.js"></script>
+	<script>
+		function show(){
+			var height = $(window).height();
+			var top = $(window).scrollTop();
+			if(top > height){
+				$(".gotop").fadeIn();
+			}else{
+				$(".gotop").fadeOut();
+			}
+		}
+		$(function(){
+			show();
+			$(window).scroll(function(){
+				show();
+			})
+		});
+	</script>
+</head>
+<body>
+<div id="main" style="width:1000px; height:2000px; background:#eee; margin:0 auto;">
+<div style="width:1000px;height:1000px;background:#75d0ff">内容</div>
+<div id="comment" style="width:1000px; height:1000px; background:#669900;">评论</div>
+</div>
+<div id="about" style="width:1000px; height:1000px; background:#F90; margin:0 auto;">关于</div>
+
+<!-- 代码开始 -->
+<div id="toTop">
+	<a class="comment" href="#comment"></a>
+	<a class="about" href="#about"></a>
+	<a class="gotop" href="javascript:void(0)"></a>
+</div>
+</body>
+</html>

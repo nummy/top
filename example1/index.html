@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="../jquery.js"></script>
+	<script>
+	$(function(){
+        //首先将#back-to-top隐藏
+        $("#top").hide();
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>100){
+                    $("#top").fadeIn();
+                }
+                else
+                {
+                    $("#top").fadeOut();
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#top").click(function(){
+                $('body,html').animate({scrollTop:0},500);
+                return false;
+            });
+        });
+    }); 
+
+	</script>
+</head>
+<body style="height:20000px; text-align:center">
+	hello,world
+	<div id="share">
+		<a href="" id="top">返回顶部</a>
+		<a href="http://weibo.com/" target="_blank" class="sina">评论</a>
+		<a href="http://t.qq.com/laozuoorg"  target="_blank" class="tencent">相关</a>
+	</div>
+</body>
+</html>

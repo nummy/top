@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src='../jquery.js'></script>
+	<script>
+		$(function(){
+			var toggle = true;
+			$(".right-ico").mouseover(function(){
+				var show = $(this).data("show");
+				var hide = $(this).data("hide");
+				var tiptop = show == "tel"?65:-10;
+				toggle = false;
+				$("#right_tip").css("top", tiptop).show().find(".flag_" + show).show();
+				$(".flag_" + hide).hide();
+			}).mouseout(function(){
+				toggle = true;
+				hideRightTip();
+			});
+			$("#right_tip").mouseover(function(){
+				toggle = false;
+				$(this).show();
+			}).mouseout(function(){
+				toggle = true;
+				hideRightTip();
+			});
+			function hideRightTip(){
+				setTimeout(function(){		
+					if(toggle) $("#right_tip").hide();
+				}, 500);
+			}
+			$("#toTop").click(function(){
+				var _this = $(this);
+				$("html, body").animate({scrollTop:0}, 500, function(){
+					_this.hide();
+				})
+			});
+			$(window).scroll(function(){
+				var htmlTop = $(document).scrollTop();
+				if( htmlTop > 0){
+					$("#toTop").fadeIn();	
+				}else{
+					$("#toTop").fadeOut();
+				}
+			});
+
+		});
+	</script>
+</head>
+<body style="height:1200px">
+	<div id="rightButton">
+		<ul id="right_ul">
+			<li id="right_qq" class="right-ico" data-show="qq" data-hide="tel"></li>
+			<li id="right_tel" class="right-ico" data-show="tel" data-hide="qq"></li>
+			<li id="right_tip">
+				<p class="flagshow-p1 flag_tel">咨询电话</p>
+				<p class="flagshow-p2 line91 flag_tel">400-800-8000</p>
+				<p class="flagshow-p1 flag_qq">咨询QQ</p>
+				<p class="flagshow-p2 flag_qq"><a href=""><img src="images/qiyeQQ.png" alt=""></a><span>
+				80000000</span></p>
+			</li>
+			<li><div id="toTop"><a href="" class="totop"></a></div></li>
+		</ul>
+	</div>
+</body>
+</html>
