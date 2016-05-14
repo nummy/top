@@ -2,6 +2,9 @@
 	padding:0;
 	margin:0;
 }
+body{
+	font-size:12px;
+}
 a{
 	color:#666;
 	text-decoration: none;
@@ -43,6 +46,8 @@ a:hover{
 	height:40px;
 	margin:2px auto;
 }
+
+
 #floatPanel #ctrlPanel .arrow span{
 	display:none;
 }
@@ -59,3 +64,85 @@ a:hover{
 #floatPanel #ctrlPanel .contact span{
 	line-height: 90px;
 }
+
+
+
+#floatPanel .popPanel{
+	width:230px;
+	height:242px;
+	position:fixed;
+	right:70px;
+	top:300px;
+	z-index: 10000;
+	overflow: hidden;
+	display: none;
+}
+
+#floatPanel .popPanel .popPanel-inner {
+	width:230px;
+	height:242px;
+	position:relative;
+	overflow: hidden;
+}
+#floatPanel .popPanel .popPanel-inner .arrowPanel{
+	width:10px;
+	height:240px;
+	position: absolute;
+	right:1px;
+	top:102px;
+}
+
+
+
+#floatPanel .popPanel .popPanel-inner .arrowPanel .arrow1{
+	width:0;
+	height:0;
+	font-size: 0;
+	line-height: 0;
+	border-top:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom:10px solid transparent;
+	border-left:10px solid #ddd;
+	position:absolute;
+	bottom:0;
+	left:2px;
+	top:0;
+}
+#floatPanel .popPanel .popPanel-inner .arrowPanel .arrow2{
+	width:0;
+	height:0;
+	font-size: 0;
+	line-height: 0;
+	border-top:10px solid transparent;
+	border-right:10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left:10px solid #fff;
+	position:absolute;
+	bottom:0;
+	left:0;
+	top:0;
+}
+
+#floatPanel .popPanel .popPanel-inner .qrcodePanel{
+	width:220px;
+	height:240px;
+	text-align: center;
+	background: #fff;
+	border:solid 1px #ddd;
+	position: absolute;
+	left:0;
+	top:0;
+	overflow: hidden;
+}
+#floatPanel .popPanel .popPanel-inner .qrcodePanel img{
+	width:200px;
+	height: 200px;
+	border:none;
+	padding:10px 10px 5px 10px;
+}
+#floatPanel .popPanel .popPanel-inner .qrcodePanel span{
+	font-size: 12px;
+	color: :#666;
+	line-height: 24px;
+	letter-spacing: 1px;
+} 
