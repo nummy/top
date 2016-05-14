@@ -1,0 +1,61 @@
+*{
+	padding:0;
+	margin:0;
+}
+a{
+	color:#666;
+	text-decoration: none;
+}
+a:hover{
+	color:#1e90ff;
+}
+#floatPanel{}
+#floatPanel #ctrlPanel{
+	position:fixed;
+	right:25px;
+	top:300px;
+	width:36px;
+	height: 166px;
+	overflow: hidden;
+	background: #fff url(images/float-panel-bg.gif) no-repeat left top;
+	border:solid 1px #ddd;
+	z-index: 1000;
+}
+#floatPanel #ctrlPanel a{
+	width:34px;
+	font-size:12px;
+	color:#ff6600;
+	letter-spacing:1px;
+	text-align:center;
+	overflow:hidden;
+	display:block;
+}
+#floatPanel #ctrlPanel .arrow{
+	height:29px;
+	line-height: 28px;
+	margin:1px auto;
+}
+#floatPanel #ctrlPanel .contact{
+	height:60px;
+	margin:2px auto;
+}
+#floatPanel #ctrlPanel .qrcode{
+	height:40px;
+	margin:2px auto;
+}
+#floatPanel #ctrlPanel .arrow span{
+	display:none;
+}
+#floatPanel #ctrlPanel .arrow:hover{
+	background:#f4f4f4;
+}
+#floatPanel #ctrlPanel .arrow:hover span{
+	display:block;
+}
+#floatPanel #ctrlPanel .qrcode span{
+	display:none;
+}
+
+#floatPanel #ctrlPanel .contact span{
+	line-height: 90px;
+}
