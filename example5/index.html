@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="../jquery.js"></script>
+	<script>
+	$(function(){
+		$("#top a").hover(function(){
+				if($(this).prop("className")=="youhui"){
+					$(this).children("img.hides").show();
+				}else{
+					$(this).children("img.hides").show();
+					$(this).children("img.shows").hide();
+					$(this).children("img.hides").animate({marginRight:'0px'},'slow'); 
+				}
+			},function(){ 
+				if($(this).prop("className")=="youhui"){
+					$(this).children("img.hides").hide('slow');
+				}else{
+					$(this).children("img.hides").animate({marginRight:'-143px'},'slow',function(){
+						$(this).hide();
+						$(this).next("img.shows").show();
+				});
+			}
+		});
+		$("#top_btn").click(function(){
+			if(scroll=="off") 
+				return;
+			$("html,body").animate({scrollTop: 0}, 300);
+		});
+	});
+	</script>
+</head>
+<body style="height=5000px">
+	<div id="top">
+		<ul>
+			<li><a href=""><img src="images/ll01.png" width="131" height="49" class="hides"/><img src="images/l01.png" width="47" height="49" class="shows" /></a></li>
+			<li><a href=""><img src="images/ll03.png" width="131" height="49"  class="hides"/><img src="images/l03.png" width="47" height="49" class="shows" /></a></li>
+			<li><a class="youhui"><img src="images/l02.png" width="47" height="49" class="shows" /><img src="images/youhui.png" width="145" height="343" class="hides" usemap="#taklhtml"/><map name="taklhtml"><area shape="rect" coords="26,273,115,300 " href="" /></map></a></li>
+			<li><a href=""><img src="images/ll04.png" width="131" height="49" class="hides"/><img src="images/l04.png" width="47" height="49" class="shows"/></a></li>
+			<li><a href=""><img src="images/ll05.png" width="131" height="49" class="hides"/><img src="images/l05.png" width="47" height="49" class="shows" /></a></li>
+			<li><a id="top_btn"><img src="images/ll06.png" width="131" height="49" class="hides"/><img src="images/l06.png" width="47" height="49" class="shows" /></a></li>
+		</ul>
+	</div>
+</body>
+</html>

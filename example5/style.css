@@ -1,0 +1,12 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";background:#ddd;}
+/* leftsead */
+#top{width:131px;height:143px;position:fixed;top:258px;right:0px;}
+*html #top{margin-top:258px;position:absolute;top:expression(eval(document.documentElement.scrollTop));}
+#top li{width:131px;height:60px;}
+#top li img{float:right;}
+#top li a{height:49px;float:right;display:block;min-width:47px;max-width:131px;}
+#top li a .shows{display:block;}
+#top li a .hides{margin-right:-143px;cursor:pointer;cursor:hand;}
+#top li a.youhui .hides{display:none;position:absolute;right:190px;top:2px;}
